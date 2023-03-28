@@ -7,12 +7,16 @@ class Palindromo:
         cadena = ''.join(e for e in cadena if e.isalnum())
         return cadena.lower() == cadena[::-1].lower()
 
+    def test(self):
+        return Palindromo.esPalindromo(self.cadena)
 
-p = Palindromo()
-print(p.esPalindromo('radar')) 
-print(p.esPalindromo('sonar')) 
-print(p.esPalindromo('Arde ya la yedra')) 
-print(p.esPalindromo('Ardeyalayedra')) 
-print(p.esPalindromo('!@#$% %$#@!')) 
-print(p.esPalindromo('L O L')) 
+    def __del__(self):
+        print(self.cadena.upper() + ' ha sido eliminado')
 
+
+
+p = Palindromo("radar") 
+print(p.test()) 
+
+p = Palindromo("sonar") 
+print(p.test()) 
